@@ -44,7 +44,7 @@
     "short_name": "kitty",
     "theme_color": "#ffffff",
     "background_color": "01579b",
-    "start_url": ".",
+    "start_url": "/",
     "display": "standalone",
     "orientation": "portrait",
     "description": "An application for tracking household expenses"
