@@ -1,5 +1,5 @@
 // setup service worker const variables
-const APP_PREFIX = 'Kitty';
+const APP_PREFIX = 'Kitty-';
 const VERSION = 'version_01';
 const CACHE_NAME = APP_PREFIX + VERSION;
 
@@ -22,7 +22,7 @@ const FILES_TO_CACHE = [
 self.addEventListener('install', function(evt) {
     evt.waitUntil(
         caches.open(CACHE_NAME).then(function(cache) {
-            console.log('installing cahce: ' + CACHE_NAME)
+            console.log('installing cache: ' + CACHE_NAME)
             return cache.addAll(FILES_TO_CACHE)
         })
     )
