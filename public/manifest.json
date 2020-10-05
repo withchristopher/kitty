@@ -1,13 +1,13 @@
 {
-    "icons": {
+    "icons": [{
         "src": "icons/icon-251x251.png",
         "sizes": "251x251",
         "type": "image/png"
-    },
+    }],
     "name": "kitty-budget",
     "short_name": "kitty",
     "theme_color": "#ffffff",
-    "background_color": "01579b",
+    "background_color": "#01579b",
     "start_url": "/",
     "display": "standalone",
     "orientation": "portrait",
