@@ -25,7 +25,8 @@ self.addEventListener('install', function(evt) {
             console.log('installing cache: ' + CACHE_NAME)
             return cache.addAll(FILES_TO_CACHE)
         })
-    )
+    );
+    self.skipWaiting();
 })
 
 // activate service worker
@@ -47,6 +48,7 @@ self.addEventListener('activate', function(evt) {
             );
         })
     );
+    self.clients.claim();
 });
 
 // fetch service worker

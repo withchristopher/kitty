@@ -27,7 +27,7 @@ request.onerror = function(event) {
     // log error here
     console.log(event.target.errorCode);
 };
-// This function will be executed if we attempt to submit a new pizza and there's no internet connection
+// This function will be executed if we attempt to submit a new transactions and there's no internet connection
 function saveRecord(record) {
     // open a new transaction with the database with read and write permissions 
     const transaction = db.transaction(['new_transaction'], 'readwrite');
@@ -53,7 +53,7 @@ function uploadTransaction() {
     getAll.onsuccess = function() {
         // if there was data in indexedDb's store, let's send it to the api server
         if (getAll.result.length > 0) {
-            fetch('/api/pizzas', {
+            fetch('/api/transactions', {
                     method: 'POST',
                     body: JSON.stringify(getAll.result),
                     headers: {
